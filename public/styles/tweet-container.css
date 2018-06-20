@@ -1,0 +1,70 @@
+#tweet-section article {
+  margin-top: 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-color:#b8b8bd;
+  overflow: hidden;
+
+}
+
+#tweet-section article:hover {
+  margin-top: 20px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+}
+
+#tweet-section article:hover .icon {
+  visibility: visible;
+}
+
+#tweet-section header{
+  background-color: #f0f0f2;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 70px;
+ 
+}
+#tweet-section h3 {
+  margin-top: 0px;
+}
+
+#tweet-section .tweet-date {
+  padding-top: 10px;
+  padding-left: 10px;
+  border-top-style: solid;
+  border-top-width: thin;
+  border-color: #f0f0f2
+}
+
+#tweet-section .tweet-body {
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#tweet-section .user-logo {
+  width: 45px;
+  height: 45px;
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+#tweet-section .user-handle{
+  float:right;
+  font-weight: normal;
+}
+
+#tweet-section .icon {
+  float:right;
+  margin-right:10px;
+  visibility: hidden;
+  color: #08a087;
+}
