@@ -54,6 +54,7 @@
 $(document).ready(function () {
 
   function renderTweets(tweets) {
+    $('#tweet-section').empty();
     for (let index of tweets) {
       let tweet = createTweetElement(index)
       $('#tweet-section').prepend(tweet)
@@ -90,6 +91,14 @@ $(document).ready(function () {
       }
     })
   }
+  loadTweets()
+
+  $('#nav-bar button.compose' ).click(function() {
+    $('#nav-bar button.compose').css('cursor', 'pointer');
+    $('section.new-tweet' ).slideToggle( "slow", function() {
+      $('#input-field').focus();
+    });
+  });
 
   function createTweetElement(tweet) {
 
