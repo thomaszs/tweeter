@@ -12,10 +12,12 @@ section.new-tweet {
   padding: 10px;
 } 
 
+input[type='submit'] {
+  cursor: pointer;
+}
+
 .new-tweet h2 {
-  border-bottom-color: black;
-  border-bottom-style: solid;
-  border-bottom-width: thin;
+  border-bottom: thin solid black;
 }
 
 span.counter {

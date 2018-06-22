@@ -1,9 +1,7 @@
 #tweet-section article {
   margin-top: 20px;
   border-radius: 10px;
-  border-style: solid;
-  border-width: thin;
-  border-color:#b8b8bd;
+  border: solid thin #b8b8bd;
   overflow: hidden;
 
 }
@@ -22,9 +20,7 @@
 
 #tweet-section header{
   background-color: #f0f0f2;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px 10px 0;
   height: 70px;
  
 }
@@ -67,5 +63,9 @@
   margin-right:10px;
   visibility: hidden;
   color: #08a087;
+}
+
+#tweet-section .icon svg {
+  margin: 0 3px;
 }
 

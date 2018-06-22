@@ -13,10 +13,11 @@ This repository is the starter code for the project: Students will fork and clon
 - md5
 - Mongodb
 
-## Final Product
-
-
-
+## Screenshots
+!["Screenshot of tweeter home page"](https://github.com/thomaszs/tweeter/blob/master/docs/Tweet-page.png?raw=true)
+!["Screenshot of tweet compose box"](https://github.com/thomaszs/tweeter/blob/master/docs/Tweet-box.png?raw=true)
+!["Screenshot of tweet"]
+(https://github.com/thomaszs/tweeter/blob/master/docs/Tweets.png?raw=true) 
 
 ## Getting Started
 

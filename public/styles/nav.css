@@ -5,8 +5,7 @@ nav#nav-bar {
   right: 0;
   left: 0;
   top: 0;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0 2rem;
   z-index: 2;
 }
 
@@ -38,4 +37,5 @@ nav#nav-bar {
 #nav-bar button.compose:hover {
   color: black;
   filter: opacity(100%);
+  cursor: pointer;
 }

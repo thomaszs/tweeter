@@ -21,7 +21,8 @@ $(document).ready(function () {
     if (!form) {
       alert("Please type in something!");
       return;
-    } else if (form.length > 140) {
+    } 
+    if (form.length > 140) {
       alert("You have exceeded the input limit");
       return;
     } else {
@@ -45,10 +46,9 @@ $(document).ready(function () {
       }
     })
   }
-  loadTweets()
+  loadTweets();
 
   $('#nav-bar button.compose' ).click(function() {
-    $('#nav-bar button.compose').css('cursor', 'pointer');
     $('section.new-tweet' ).slideToggle( "slow", function() {
       $('#input-field').focus();
     });
