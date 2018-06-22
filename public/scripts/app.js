@@ -62,6 +62,7 @@ $(document).ready(function () {
     let dataHandle = tweet.user.handle;
     let dataBody = tweet.content.text;
     let dataDate = tweet.created_at;
+    let dataDateAgo = humanizeDuration(+ new Date() - dataDate, { units : ['d', 'h', 'm'], round: true });
 
     let $h3 = $('<h3>').text(dataName);
     let userLogo = $('<img>').attr('src', dataImg).addClass('user-logo');
@@ -77,7 +78,7 @@ $(document).ready(function () {
     let icon2 = $('<i>').addClass('fas fa-retweet');
     let icon3 = $('<i>').addClass('fas fa-heart');
     let $iconClass = $('<span>').addClass('icon');
-    let $tweetdate = $('<p>').text(dataDate).addClass('tweet-date');
+    let $tweetdate = $('<p>').text(dataDateAgo + " ago").addClass('tweet-date');
     let $footer = $('<footer>');
     $iconClass.append(icon1, icon2, icon3);
     $tweetdate.append($iconClass);
