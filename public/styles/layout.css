@@ -31,3 +31,10 @@ main.container {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media (max-device-width: 420px) {
+  main.container {
+    width: 100%;
+    font-size: 200%
+  }
+} 
