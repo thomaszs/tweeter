@@ -45,7 +45,6 @@ $(document).ready(function () {
       }
     })
   }
-  
   loadTweets()
 
   $('#nav-bar button.compose' ).click(function() {
@@ -89,5 +88,4 @@ $(document).ready(function () {
 
     return $tweet
   }
-  // renderTweets(data);
 })
