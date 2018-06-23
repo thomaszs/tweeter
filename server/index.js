@@ -8,8 +8,7 @@ require('dotenv').config();
 
 // Mongo setup:
 const {MongoClient} = require('mongodb');
-const MONGODB_URI = process.env.MONGODB_URI;
-
+const MONGODB_URI = "mongodb://localhost:27017/tweeter"
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -23,16 +22,17 @@ MongoClient.connect(MONGODB_URI, (err, client) => {
   }
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
+  let db = client.db('tweeter');
+  const DataHelpers = require("./lib/data-helpers.js")(db);
 
-const DataHelpers = require("./lib/data-helpers.js")(client);
+  // The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
+  // so it can define routes that use it to interact with the data layer.
+  const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
-// The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
-// so it can define routes that use it to interact with the data layer.
-const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  // Mount the tweets routes at the "/tweets" path prefix:
+  app.use("/tweets", tweetsRoutes);
 
-// Mount the tweets routes at the "/tweets" path prefix:
-app.use("/tweets", tweetsRoutes);
-
-app.listen(process.env.PORT || 8080) 
-
+  app.listen(PORT, () => {
+    console.log("Example app listening on port " + PORT);
+  });
 })
