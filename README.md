@@ -12,6 +12,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Body-Parser
 - md5
 - Mongodb
+- dotenv
 
 ## Screenshots
 !["Screenshot of tweeter home page"](https://github.com/thomaszs/tweeter/blob/master/docs/Tweet-page.png?raw=true)
